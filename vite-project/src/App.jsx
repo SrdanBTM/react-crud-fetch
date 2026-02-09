@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react'
+import Main from './components/feature/main/Main.jsx'
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
 
   return (
     <div>
-      
+      <Main items={items}/>
     </div>
   )
 }
