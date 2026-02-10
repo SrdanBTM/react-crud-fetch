@@ -1,6 +1,7 @@
 
 
 import styles from './itemRow.module.css'
+import Button from '../../ui/button/Button.jsx'
 
 
 export default function ItemRow({ item }) {
@@ -11,8 +12,8 @@ export default function ItemRow({ item }) {
       <td>{item.description}</td>
       <td className={styles.price}>{item.price}</td>
       <td className={styles.actions}>
-        <button className={`${styles.button} ${styles.edit}`}>Edit</button>
-        <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+        <Button title='Edit' variant='edit' />
+        <Button title='Delete' variant='delete' />
       </td>
     </tr>
   )

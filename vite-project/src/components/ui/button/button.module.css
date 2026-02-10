@@ -1,0 +1,28 @@
+
+
+.button {
+  width: 60px;
+  height: 40px;
+  border: 2px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: border 0.15s ease;
+  background-color: transparent;
+}
+
+.edit {
+  color: #1a5fd0;
+  margin-right: 20px;
+}
+
+.edit:hover {
+  border: 2px solid #1a5fd0;
+}
+
+.delete {
+  color: #c81e1e;
+}
+
+.delete:hover {
+  border: 2px solid #c81e1e;
+}
