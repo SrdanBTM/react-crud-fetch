@@ -1,7 +1,7 @@
 
 
 import styles from './main.module.css'
-import ItemList from '../items-list/ItemsList'
+import ItemList from '../items-table/ItemsTable'
 
 
 export default function Main({ items }) {
