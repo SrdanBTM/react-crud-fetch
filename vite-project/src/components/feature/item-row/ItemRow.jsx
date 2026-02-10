@@ -9,10 +9,10 @@ export default function ItemRow({ item }) {
     <tr className={styles.container}>
       <td>{item.title}</td>
       <td>{item.description}</td>
-      <td>{item.price}</td>
-      <td>
-        <button>Edit</button>
-        <button>Delete</button>
+      <td className={styles.price}>{item.price}</td>
+      <td className={styles.actions}>
+        <button className={`${styles.button} ${styles.edit}`}>Edit</button>
+        <button className={`${styles.button} ${styles.delete}`}>Delete</button>
       </td>
     </tr>
   )

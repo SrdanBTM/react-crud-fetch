@@ -1,0 +1,10 @@
+
+
+.container {
+  width: 1000px;
+  height: 100%;
+}
+
+.container th {
+  padding: 15px 20px;
+}
