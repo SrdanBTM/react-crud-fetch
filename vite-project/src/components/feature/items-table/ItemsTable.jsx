@@ -12,6 +12,7 @@ export default function ItemsTable({ items }) {
     <table className={styles.container}>
       <thead>
         <tr>
+          <th>Category</th>
           <th>Title</th>
           <th>Description</th>
           <th>Price</th>

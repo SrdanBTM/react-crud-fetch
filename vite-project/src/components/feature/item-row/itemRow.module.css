@@ -14,3 +14,8 @@
 .price {
   text-align: right;
 }
+
+.category {
+  text-transform: uppercase;
+  font-size: 14px;
+}

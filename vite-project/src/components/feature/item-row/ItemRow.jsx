@@ -8,6 +8,7 @@ export default function ItemRow({ item }) {
 
   return (
     <tr className={styles.container}>
+      <td className={styles.category}>{item.category}</td>
       <td>{item.title}</td>
       <td>{item.description}</td>
       <td className={styles.price}>{item.price}</td>
