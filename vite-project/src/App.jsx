@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import Main from './components/feature/main/Main.jsx'
+import Header from './components/feature/header/Header.jsx'
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       <Main items={items}/>
     </div>
   )
