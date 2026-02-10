@@ -1,15 +1,15 @@
 
 
 import styles from './header.module.css'
-import Search from '../search/Search.jsx'
-import Filter from '../filter/Filter.jsx'
+import SearchBar from '../search-bar/SearchBar.jsx'
+import ControlsBar from '../controls-bar/ControlsBar.jsx'
 
 export default function Header() {
 
   return (
     <header className={styles.container}>
-      <Search />
-      <Filter />
+      <SearchBar />
+      <ControlsBar />
     </header>
   )
 }
