@@ -1,28 +1,48 @@
 
 
 .button {
-  width: 60px;
   height: 40px;
-  border: 2px solid rgba(0,0,0,0.1);
+  border: 2px solid rgba(0,0,0,0);
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 20px;
   transition: border 0.15s ease;
   background-color: transparent;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
+
+
 .edit {
+  width: 80px;
   color: #1a5fd0;
   margin-right: 20px;
+  background-color: rgba(26, 95, 208, 0.05);
 }
 
 .edit:hover {
   border: 2px solid #1a5fd0;
 }
 
+
+
 .delete {
+  width: 80px;
   color: #c81e1e;
+  background-color: rgba(200, 30, 30, 0.05);
 }
 
 .delete:hover {
   border: 2px solid #c81e1e;
+}
+
+
+
+.reset {
+  width: 140px;
+  background-color: rgba(0,0,0,0.05);
+}
+
+.reset:hover {
+  border: 2px solid #000;
 }
