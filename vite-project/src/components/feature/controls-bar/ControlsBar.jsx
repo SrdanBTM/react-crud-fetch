@@ -3,7 +3,7 @@
 import styles from './controlsBar.module.css'
 import CategorySelect from '../category-select/CategorySelect.jsx'
 import SortSelect from '../sort-select/SortSelect.jsx'
-import ResetButton from '../reset-button/ResetButton.jsx'
+import Button from '../../ui/button/Button.jsx'
 
 
 export default function ControlsBar() {
@@ -12,7 +12,7 @@ export default function ControlsBar() {
     <div className={styles.container}>
       <CategorySelect />
       <SortSelect />
-      <ResetButton />
+      <Button title='Reset filters' variant='reset' />
     </div>
   )
 }
