@@ -14,7 +14,7 @@
 }
 
 .button:hover {
-  border-color: #cbd5e1;
+  border-color: var(--border-color-hover);
 }
 
 
@@ -43,12 +43,10 @@
   padding: 0 18px;
   border-radius: 20px;
   border: 1px solid var(--border-color);
-  background: #f8fafc;
+  background: var(--neutral);
   color: var(--text-primary);
-  text-transform: uppercase;
-  font-size: 13px;
 }
 
 .reset:hover {
-  background: #e2e8f0;
+  background: var(--neutral-hover);
 }

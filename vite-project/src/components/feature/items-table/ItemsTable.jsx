@@ -9,22 +9,22 @@ export default function ItemsTable({ items }) {
 
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
 
-      <tbody>
-        {items.map(item => (
-          <ItemRow key={item.id} item={item} />
-        ))}
-      </tbody>
-    </table>
+        <tbody>
+          {items.map(item => (
+            <ItemRow key={item.id} item={item} />
+          ))}
+        </tbody>
+      </table>
   )
 }
