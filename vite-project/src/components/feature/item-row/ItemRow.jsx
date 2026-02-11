@@ -9,12 +9,14 @@ export default function ItemRow({ item }) {
   return (
     <tr className={styles.container}>
       <td className={styles.category}>{item.category}</td>
-      <td>{item.title}</td>
-      <td>{item.description}</td>
-      <td className={styles.price}>{item.price}</td>
+      <td className={styles.title}>{item.title}</td>
+      <td className={styles.description}>{item.description}</td>
+      <td className={styles.price}>{item.price.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}</td>
       <td className={styles.actions}>
-        <Button title='Edit' variant='edit' />
-        <Button title='Delete' variant='delete' />
+        <div>
+          <Button title='Edit' variant='edit' />
+          <Button title='Delete' variant='delete' />
+        </div>
       </td>
     </tr>
   )

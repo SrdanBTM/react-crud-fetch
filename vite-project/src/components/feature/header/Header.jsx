@@ -8,8 +8,10 @@ export default function Header() {
 
   return (
     <header className={styles.container}>
-      <SearchBar />
-      <ControlsBar />
+      <div className={styles.content}>
+        <SearchBar />
+        <ControlsBar />
+      </div>
     </header>
   )
 }

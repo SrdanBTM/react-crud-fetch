@@ -9,7 +9,7 @@ export default function ItemsTable({ items }) {
 
 
   return (
-    <table className={styles.container}>
+    <table>
       <thead>
         <tr>
           <th>Category</th>

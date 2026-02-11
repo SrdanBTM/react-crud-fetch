@@ -2,47 +2,53 @@
 
 .button {
   height: 40px;
-  border: 2px solid rgba(0,0,0,0);
+  padding: 0 14px;
+  border-radius: 8px;  
+  border: 1px solid transparent;
+  background: transparent;
+  font-size: 13px;
+  text-transform: none; 
   cursor: pointer;
-  border-radius: 20px;
-  transition: border 0.15s ease;
-  background-color: transparent;
-  font-size: 14px;
-  text-transform: uppercase;
+  transition: background 0.15s ease, border 0.15s ease, color 0.15s ease;
+  border: 1px solid var(--border-color);
 }
 
+.button:hover {
+  border-color: #cbd5e1;
+}
 
 
 .edit {
+  color: var(--primary);
   width: 80px;
-  color: #1a5fd0;
-  margin-right: 20px;
-  background-color: rgba(26, 95, 208, 0.05);
 }
 
 .edit:hover {
-  border: 2px solid #1a5fd0;
+  background: rgba(37, 99, 235, 0.08);
 }
 
 
 
 .delete {
+  color: var(--danger);
   width: 80px;
-  color: #c81e1e;
-  background-color: rgba(200, 30, 30, 0.05);
 }
 
 .delete:hover {
-  border: 2px solid #c81e1e;
+  background: rgba(220, 38, 38, 0.08);
 }
-
 
 
 .reset {
-  width: 140px;
-  background-color: rgba(0,0,0,0.05);
+  padding: 0 18px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: #f8fafc;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 .reset:hover {
-  border: 2px solid #000;
+  background: #e2e8f0;
 }
