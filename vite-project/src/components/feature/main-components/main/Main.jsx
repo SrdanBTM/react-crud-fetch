@@ -1,16 +1,16 @@
 
 
 import styles from './main.module.css'
-import ItemList from '../items-table/ItemsTable'
+import ItemTable from '../items-table/ItemsTable'
 
 
-export default function Main({ items, setItemToDelete, setOpenedModal }) {
+export default function Main({ items, setCurrentItem, setOpenedModal }) {
 
   return (
     <main className={styles.container}>
-      <ItemList
+      <ItemTable
         items={items}
-        setItemToDelete={setItemToDelete}
+        setCurrentItem={setCurrentItem}
         setOpenedModal={setOpenedModal}
       />
     </main>

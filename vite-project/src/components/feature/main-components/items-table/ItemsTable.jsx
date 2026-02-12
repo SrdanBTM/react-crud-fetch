@@ -4,7 +4,7 @@ import styles from './itemsTable.module.css'
 import ItemRow from '../item-row/ItemRow.jsx'
 
 
-export default function ItemsTable({ items, setItemToDelete, setOpenedModal }) {
+export default function ItemsTable({ items, setCurrentItem, setOpenedModal }) {
 
 
 
@@ -25,7 +25,7 @@ export default function ItemsTable({ items, setItemToDelete, setOpenedModal }) {
           <ItemRow
             key={item.id}
             item={item}
-            setItemToDelete={setItemToDelete}
+            setCurrentItem={setCurrentItem}
             setOpenedModal={setOpenedModal}
           />
         ))}

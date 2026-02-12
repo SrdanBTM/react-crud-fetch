@@ -13,7 +13,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
   const [openedModal, setOpenedModal] = useState(null)
-  const [itemToDelete, setItemToDelete] = useState(null)
+  const [currentItem, setCurrentItem] = useState(null)
 
 
   useEffect(() => {
@@ -51,7 +51,7 @@ function App() {
 
       {openedModal === 'deleteModal'
         && <DeleteModal
-        itemToDelete={itemToDelete}
+        currentItem={currentItem}
         />
       }
 
@@ -73,7 +73,7 @@ function App() {
 
       <Main
         items={items}
-        setItemToDelete={setItemToDelete}
+        setCurrentItem={setCurrentItem}
         setOpenedModal={setOpenedModal}
       />
 

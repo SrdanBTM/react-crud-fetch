@@ -4,7 +4,7 @@ import Button from '../../ui/button/Button.jsx'
 import Modal from '../../ui/modal/Modal.jsx'
 
 
-export default function DeleteModal({ itemToDelete }) {
+export default function DeleteModal({ currentItem }) {
 
   const footer =
     <>
@@ -27,7 +27,7 @@ export default function DeleteModal({ itemToDelete }) {
       <>
         <p>Are you sure you want to delete:</p>
         <p>
-          <strong>"{itemToDelete.title}"?</strong>
+          <strong>"{currentItem.title}"?</strong>
         </p>
         <p>This action cannot be undone.</p>
       </>

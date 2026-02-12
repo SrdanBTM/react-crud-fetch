@@ -4,15 +4,13 @@ import styles from './itemRow.module.css'
 import Button from '../../../ui/button/Button.jsx'
 
 
-export default function ItemRow({ item, setItemToDelete, setOpenedModal }) {
+export default function ItemRow({ item, setCurrentItem, setOpenedModal }) {
 
 
   function handleDelete() {
-    setItemToDelete(item)
+    setCurrentItem(item)
     setOpenedModal('deleteModal')
   }
-
-
 
   return (
     <tr className={styles.container}>
