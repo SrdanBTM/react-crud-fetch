@@ -4,7 +4,7 @@ import styles from './modal.module.css'
 import Button from '../button/Button.jsx'
 
 
-export default function Modal({ title, content, footer}) {
+export default function Modal({ title, children, footer}) {
 
   return (
     <div className={styles.overlay}>
@@ -12,11 +12,11 @@ export default function Modal({ title, content, footer}) {
         <Button title='X' variant='closeButtonModal' />
 
         <header>
-          {title}
+          <h2>{title}</h2>
         </header>
 
         <div className={styles.content}>
-          {content}
+          {children}
         </div>
 
         <footer>
