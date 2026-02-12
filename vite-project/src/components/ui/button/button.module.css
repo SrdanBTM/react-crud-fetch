@@ -3,10 +3,9 @@
 .button {
   height: 40px;
   padding: 0 14px;
-  border-radius: 8px;  
-  border: 1px solid transparent;
+  border-radius: 8px;
   background: transparent;
-  text-transform: none; 
+  text-transform: none;
   cursor: pointer;
   transition: background 0.15s ease, border 0.15s ease, color 0.15s ease;
   border: 1px solid var(--border-color);
@@ -17,30 +16,33 @@
 }
 
 
-.edit {
+
+.editButtonAction, 
+.deleteButtonAction{
+  width: 80px;
+  font-size: 13px;
+}
+
+.editButtonAction {
   color: var(--primary);
-  width: 80px;
-  font-size: 13px;
 }
 
-.edit:hover {
-  background: rgba(37, 99, 235, 0.08);
+.editButtonAction:hover {
+  background: var(--primary-hover);
 }
 
-
-
-.delete {
+.deleteButtonAction {
   color: var(--danger);
-  width: 80px;
-  font-size: 13px;
+
 }
 
-.delete:hover {
-  background: rgba(220, 38, 38, 0.08);
+.deleteButtonAction:hover {
+  background: var(--danger-hover);
 }
 
 
-.reset {
+
+.resetButtonFilter {
   padding: 0 18px;
   border-radius: 20px;
   border: 1px solid var(--border-color);
@@ -49,6 +51,62 @@
   font-size: 14px;
 }
 
-.reset:hover {
+.resetButtonFilter:hover {
+  background: var(--neutral-hover);
+}
+
+
+
+.closeButtonModal {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.closeButtonModal:hover {
+  background: var(--neutral-hover);
+}
+
+
+
+.deleteButtonModal,
+.saveButtonModal, 
+.addButtonModal,
+.cancelButtonModal {
+  width: 120px;
+  font-size: 14px;
+}
+
+.deleteButtonModal {
+  color: var(--danger);
+}
+
+.deleteButtonModal:hover {
+  background: var(--danger-hover);
+}
+
+.saveButtonModal, 
+.addButtonModal,
+.canceButtonModal {
+  color: var(--primary);
+}
+
+.saveButtonModal:hover,
+.addButtonModal:hover {
+  background: var(--primary-hover);
+}
+
+.cancelButtonModal {
+  background: var(--neutral);
+}
+
+.cancelButtonModal:hover {
   background: var(--neutral-hover);
 }
