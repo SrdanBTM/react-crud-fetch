@@ -6,7 +6,6 @@
   border-radius: 8px;  
   border: 1px solid transparent;
   background: transparent;
-  font-size: 13px;
   text-transform: none; 
   cursor: pointer;
   transition: background 0.15s ease, border 0.15s ease, color 0.15s ease;
@@ -21,6 +20,7 @@
 .edit {
   color: var(--primary);
   width: 80px;
+  font-size: 13px;
 }
 
 .edit:hover {
@@ -32,6 +32,7 @@
 .delete {
   color: var(--danger);
   width: 80px;
+  font-size: 13px;
 }
 
 .delete:hover {
@@ -45,6 +46,7 @@
   border: 1px solid var(--border-color);
   background: var(--neutral);
   color: var(--text-primary);
+  font-size: 14px;
 }
 
 .reset:hover {
