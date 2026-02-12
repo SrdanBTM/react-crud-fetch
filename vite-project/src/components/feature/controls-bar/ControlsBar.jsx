@@ -24,7 +24,7 @@ export default function ControlsBar({ items }) {
     <div className={styles.container}>
       <Select options={categoryOptions} />
       <Select options={sortOptions} />
-      <Button title='Reset filters' variant='reset' />
+      <Button title='Reset filters' variant='resetButtonFilter' />
     </div>
   )
 }

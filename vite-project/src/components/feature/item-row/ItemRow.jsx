@@ -14,8 +14,8 @@ export default function ItemRow({ item }) {
       <td className={styles.price}>{item.price.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}</td>
       <td className={styles.actions}>
         <div>
-          <Button title='Edit' variant='edit' />
-          <Button title='Delete' variant='delete' />
+          <Button title='Edit' variant='editButtonAction' />
+          <Button title='Delete' variant='deleteButtonAction' />
         </div>
       </td>
     </tr>
