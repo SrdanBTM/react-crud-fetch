@@ -16,6 +16,18 @@ function App() {
   const [currentItem, setCurrentItem] = useState(null)
 
 
+  const sortOptions = ['Title (A-Z)', 'Title (Z-A)', 'Price (Low-High)', 'Price (High-Low)']
+
+  const categories = ['All categories']
+  items.forEach(item => {
+    if (!categories.includes(item.category)) {
+      categories.push(item.category)
+    }
+  })
+  const categoryOptions = categories.map(category => category[0].toUpperCase() + category.slice(1).toLowerCase())
+
+
+
   useEffect(() => {
     async function load() {
       try {
@@ -51,7 +63,7 @@ function App() {
 
       {openedModal === 'deleteModal'
         && <DeleteModal
-        currentItem={currentItem}
+          currentItem={currentItem}
         />
       }
 
@@ -63,12 +75,12 @@ function App() {
 
       {openedModal === 'editModal'
         && <EditModal
-
         />
       }
 
       <Header
-        items={items}
+        sortOptions={sortOptions}
+        categoryOptions={categoryOptions}
       />
 
       <Main
