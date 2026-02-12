@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className='app'>
-      <Header />
+      <Header items={items} />
       <Main items={items}/>
     </div>
   )
