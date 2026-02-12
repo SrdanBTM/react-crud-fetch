@@ -2,6 +2,9 @@
 import { useState, useEffect } from 'react'
 import Main from './components/feature/main/Main.jsx'
 import Header from './components/feature/header/Header.jsx'
+import DeleteModal from './components/feature/modals/DeleteModal.jsx'
+import AddModal from './components/feature/modals/AddModal.jsx'
+import EditModal from './components/feature/modals/EditModal.jsx'
 
 
 function App() {
@@ -9,6 +12,7 @@ function App() {
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
+  const [openedModal, setOpenedModal] = useState('deleteModal')
 
 
   useEffect(() => {
@@ -43,8 +47,14 @@ function App() {
 
   return (
     <div className='app'>
+
+      {openedModal === 'deleteModal' && <DeleteModal />}
+      {openedModal === 'addModal' && <AddModal />}
+      {openedModal === 'editModal' && <EditModal />}
+
       <Header items={items} />
-      <Main items={items}/>
+      <Main items={items} />
+      
     </div>
   )
 }
