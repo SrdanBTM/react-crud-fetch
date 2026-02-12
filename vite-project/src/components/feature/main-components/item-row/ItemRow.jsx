@@ -1,7 +1,7 @@
 
 
 import styles from './itemRow.module.css'
-import Button from '../../ui/button/Button.jsx'
+import Button from '../../../ui/button/Button.jsx'
 
 
 export default function ItemRow({ item }) {

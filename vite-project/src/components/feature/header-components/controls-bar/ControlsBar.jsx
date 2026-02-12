@@ -1,8 +1,8 @@
 
 
 import styles from './controlsBar.module.css'
-import Select from '../../ui/select/Select.jsx'
-import Button from '../../ui/button/Button.jsx'
+import Select from '../../../ui/select/Select.jsx'
+import Button from '../../../ui/button/Button.jsx'
 
 
 export default function ControlsBar({ items }) {
