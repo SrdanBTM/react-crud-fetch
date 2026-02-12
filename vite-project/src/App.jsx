@@ -13,6 +13,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
   const [openedModal, setOpenedModal] = useState(null)
+  const [itemToDelete, setItemToDelete] = useState(null)
 
 
   useEffect(() => {
@@ -48,13 +49,34 @@ function App() {
   return (
     <div className='app'>
 
-      {openedModal === 'deleteModal' && <DeleteModal />}
-      {openedModal === 'addModal' && <AddModal />}
-      {openedModal === 'editModal' && <EditModal />}
+      {openedModal === 'deleteModal'
+        && <DeleteModal
+        itemToDelete={itemToDelete}
+        />
+      }
 
-      <Header items={items} />
-      <Main items={items} />
-      
+      {openedModal === 'addModal'
+        && <AddModal
+
+        />
+      }
+
+      {openedModal === 'editModal'
+        && <EditModal
+
+        />
+      }
+
+      <Header
+        items={items}
+      />
+
+      <Main
+        items={items}
+        setItemToDelete={setItemToDelete}
+        setOpenedModal={setOpenedModal}
+      />
+
     </div>
   )
 }
