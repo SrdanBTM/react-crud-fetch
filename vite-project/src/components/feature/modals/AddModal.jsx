@@ -5,7 +5,7 @@ import Button from '../../ui/button/Button.jsx'
 import ModalForm from '../forms/ModalForm.jsx'
 
 
-export default function AddModal({ categoryOptions }) {
+export default function AddModal({ categoryOptions, setOpenedModal }) {
 
   const footer =
     <>
@@ -24,6 +24,7 @@ export default function AddModal({ categoryOptions }) {
     <Modal
       title='Add item'
       footer={footer}
+      setOpenedModal={setOpenedModal}
     >
       <ModalForm categoryOptions={categoryOptions} />
     </Modal>

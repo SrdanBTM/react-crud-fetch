@@ -64,12 +64,14 @@ function App() {
       {openedModal === 'deleteModal'
         && <DeleteModal
           currentItem={currentItem}
+          setOpenedModal={setOpenedModal}
         />
       }
 
       {openedModal === 'addModal'
         && <AddModal
           categoryOptions={categoryOptions}
+          setOpenedModal={setOpenedModal}
         />
       }
 
@@ -77,6 +79,7 @@ function App() {
         && <EditModal
           currentItem={currentItem}
           categoryOptions={categoryOptions}
+          setOpenedModal={setOpenedModal}
         />
       }
 

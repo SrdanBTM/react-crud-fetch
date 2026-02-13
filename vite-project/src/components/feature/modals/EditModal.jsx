@@ -6,7 +6,7 @@ import ModalForm from '../../feature/forms/ModalForm.jsx'
 
 
 
-export default function EditModal({ currentItem, categoryOptions }) {
+export default function EditModal({ currentItem, categoryOptions, setOpenedModal }) {
 
   const footer =
     <>
@@ -25,6 +25,7 @@ export default function EditModal({ currentItem, categoryOptions }) {
     <Modal
       title='Edit item'
       footer={footer}
+      setOpenedModal={setOpenedModal}
     >
       <ModalForm categoryOptions={categoryOptions} />
     </Modal>
