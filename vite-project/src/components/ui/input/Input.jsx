@@ -3,9 +3,9 @@
 import styles from './input.module.css'
 
 
-export default function ItemInput() {
+export default function ItemInput({ id }) {
 
   return (
-      <input />
+      <input id={id} />
   )
 }

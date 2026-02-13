@@ -3,4 +3,17 @@
 .form {
   display: flex;
   flex-direction: column;
+  width: 80%;
+}
+
+.formField {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 6px 0;
+}
+
+.field label {
+  font-size: 13px;
+  color: var(--text-secondary);
 }
