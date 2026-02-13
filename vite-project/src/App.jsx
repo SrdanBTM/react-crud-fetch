@@ -69,6 +69,7 @@ function App() {
 
       {openedModal === 'addModal'
         && <AddModal
+          categoryOptions={categoryOptions}
         />
       }
 
@@ -82,6 +83,7 @@ function App() {
       <Header
         sortOptions={sortOptions}
         categoryOptions={categoryOptions}
+        setOpenedModal={setOpenedModal}
       />
 
       <Main

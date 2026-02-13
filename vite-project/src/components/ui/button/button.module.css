@@ -112,3 +112,20 @@
 .cancelButtonModal:hover {
   background: var(--neutral-hover);
 }
+
+
+
+.addButtonHeader {
+  height: 40px;
+  padding: 0 18px;
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: 500;
+}
+
+.addButtonHeader:hover {
+  background: var(--primary-hover);
+  border: 1px solid var(--primary);
+  color: var(--text-primary);
+}

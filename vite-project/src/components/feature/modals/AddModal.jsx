@@ -1,16 +1,31 @@
 
 
 import Modal from '../../ui/modal/Modal.jsx'
+import Button from '../../ui/button/Button.jsx'
+import ModalForm from '../forms/ModalForm.jsx'
 
-export default function AddModal() {
+
+export default function AddModal({ categoryOptions }) {
+
+  const footer =
+    <>
+      <Button
+        title='Cancel'
+        variant='cancelButtonModal'
+      />
+      <Button
+        title='Add'
+        variant='addButtonModal'
+      />
+    </>
+
 
   return (
-    <div>
-      <Modal
-        title='title'
-        content='content'
-        footer='footer'
-      />
-    </div>
+    <Modal
+      title='Add item'
+      footer={footer}
+    >
+      <ModalForm categoryOptions={categoryOptions} />
+    </Modal>
   )
 }
