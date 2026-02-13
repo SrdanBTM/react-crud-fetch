@@ -7,9 +7,11 @@ import Button from '../../../ui/button/Button.jsx'
 
 export default function ControlsBar({ sortOptions, categoryOptions }) {
 
+  const filterCategoryOptions = ['All categories', ...categoryOptions]
+
   return (
     <div className={styles.container}>
-      <Select options={categoryOptions} width='auto' />
+      <Select options={filterCategoryOptions} width='auto' />
       <Select options={sortOptions} width='auto' />
       <Button title='Reset filters' variant='resetButtonFilter' />
     </div>

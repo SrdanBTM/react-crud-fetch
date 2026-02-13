@@ -8,14 +8,12 @@ import AddItem from '../add-item/AddItem.jsx'
 
 export default function Header({ sortOptions, categoryOptions, setOpenedModal }) {
 
-  const filterCategoryOptions = ['All categories', ...categoryOptions]
-
   return (
     <header className={styles.container}>
       <SearchBar />
       <ControlsBar
         sortOptions={sortOptions}
-        categoryOptions={filterCategoryOptions}
+        categoryOptions={categoryOptions}
       />
       <AddItem setOpenedModal={setOpenedModal} />
     </header>
