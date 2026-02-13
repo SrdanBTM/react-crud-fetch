@@ -9,8 +9,8 @@ export default function ControlsBar({ sortOptions, categoryOptions }) {
 
   return (
     <div className={styles.container}>
-      <Select options={categoryOptions} />
-      <Select options={sortOptions} />
+      <Select options={categoryOptions} width='auto' />
+      <Select options={sortOptions} width='auto' />
       <Button title='Reset filters' variant='resetButtonFilter' />
     </div>
   )

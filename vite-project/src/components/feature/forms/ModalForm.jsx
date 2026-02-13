@@ -9,8 +9,7 @@ export default function ModalForm({ categoryOptions }) {
 
   return (
     <form className={styles.form}>
-      <Select options={categoryOptions} />
-      <Input />
+      <Select options={categoryOptions} width='100%' />
       <Input />
       <Input />
     </form>
