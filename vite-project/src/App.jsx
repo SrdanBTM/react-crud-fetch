@@ -65,6 +65,7 @@ function App() {
         && <DeleteModal
           currentItem={currentItem}
           setOpenedModal={setOpenedModal}
+          setItems={setItems}
         />
       }
 

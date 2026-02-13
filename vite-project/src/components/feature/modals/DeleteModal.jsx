@@ -4,7 +4,14 @@ import Button from '../../ui/button/Button.jsx'
 import Modal from '../../ui/modal/Modal.jsx'
 
 
-export default function DeleteModal({ currentItem, setOpenedModal }) {
+export default function DeleteModal({ currentItem, setOpenedModal, setItems }) {
+
+  
+  function handleDelete() {
+    setItems(prev => prev.filter(item => item.id !== currentItem.id))
+    setOpenedModal(null)
+  }
+
 
   const footer =
     <>
@@ -15,6 +22,7 @@ export default function DeleteModal({ currentItem, setOpenedModal }) {
       <Button
         title='Delete'
         variant='deleteButtonModal'
+        onClick={handleDelete}
       />
     </>
 
