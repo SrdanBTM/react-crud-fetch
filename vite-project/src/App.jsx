@@ -18,7 +18,7 @@ function App() {
 
   const sortOptions = ['Title (A-Z)', 'Title (Z-A)', 'Price (Low-High)', 'Price (High-Low)']
 
-  const categories = ['All categories']
+  const categories = []
   items.forEach(item => {
     if (!categories.includes(item.category)) {
       categories.push(item.category)
@@ -69,12 +69,13 @@ function App() {
 
       {openedModal === 'addModal'
         && <AddModal
-
         />
       }
 
       {openedModal === 'editModal'
         && <EditModal
+          currentItem={currentItem}
+          categoryOptions={categoryOptions}
         />
       }
 

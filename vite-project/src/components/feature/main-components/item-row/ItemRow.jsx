@@ -12,6 +12,12 @@ export default function ItemRow({ item, setCurrentItem, setOpenedModal }) {
     setOpenedModal('deleteModal')
   }
 
+  function handleEdit() {
+    setCurrentItem(item)
+    setOpenedModal('editModal')
+  }
+
+
   return (
     <tr className={styles.container}>
       <td className={styles.category}>{item.category}</td>
@@ -23,6 +29,7 @@ export default function ItemRow({ item, setCurrentItem, setOpenedModal }) {
           <Button
             title='Edit'
             variant='editButtonAction'
+            onClick={handleEdit}
           />
           <Button
             title='Delete'
