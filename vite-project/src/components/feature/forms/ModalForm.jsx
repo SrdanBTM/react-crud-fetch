@@ -16,21 +16,25 @@ export default function ModalForm({ categoryOptions }) {
       <div className={styles.formField}>
         <label htmlFor='category'>Category</label>
         <Select id='category' options={modalCategoryOptions} width='100%' />
+        <p className={styles.error}>Error</p>
       </div>
 
       <div className={styles.formField}>
         <label htmlFor='title'>Title</label>
         <Input id='title' />
+        <p className={styles.error}>Error</p>
       </div>
 
       <div className={styles.formField}>
         <label htmlFor='price'>Price</label>
         <Input id='price' />
+        <p className={styles.error}>Error</p>
       </div>
 
       <div className={styles.formField}>
         <label htmlFor='description'>Description</label>
         <Textarea id='description' />
+        <p className={styles.error}>Error</p>
       </div>
 
     </form>
