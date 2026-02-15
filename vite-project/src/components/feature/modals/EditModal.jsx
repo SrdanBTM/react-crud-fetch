@@ -6,7 +6,7 @@ import ModalForm from '../../feature/forms/ModalForm.jsx'
 
 
 
-export default function EditModal({ currentItem, categoryOptions, setOpenedModal }) {
+export default function EditModal({ currentItem, categoryOptions, setOpenedModal, setItems }) {
 
   const footer =
     <>
@@ -19,6 +19,7 @@ export default function EditModal({ currentItem, categoryOptions, setOpenedModal
         title='Save'
         variant='saveButtonModal'
         type='submit'
+        form='modalForm'
       />
     </>
 
@@ -29,7 +30,12 @@ export default function EditModal({ currentItem, categoryOptions, setOpenedModal
       footer={footer}
       setOpenedModal={setOpenedModal}
     >
-      <ModalForm categoryOptions={categoryOptions} />
+      <ModalForm
+        categoryOptions={categoryOptions}
+        setItems={setItems}
+        currentItem={currentItem}
+        setOpenedModal={setOpenedModal}
+      />
     </Modal>
   )
 }

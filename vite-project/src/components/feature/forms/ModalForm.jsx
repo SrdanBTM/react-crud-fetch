@@ -4,15 +4,27 @@ import styles from './modalForm.module.css'
 import Input from '../../ui/input/Input.jsx'
 import Select from '../../ui/select/Select.jsx'
 import Textarea from '../../ui/textarea/Textarea.jsx'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
-export default function ModalForm({ categoryOptions, setItems, setOpenedModal }) {
+export default function ModalForm({ categoryOptions, setItems, setOpenedModal, currentItem }) {
 
   const modalCategoryOptions = ['', ...categoryOptions]
 
   const [formValues, setFormValues] = useState({ category: '', title: '', price: '', description: '' })
   const [errors, setErrors] = useState({})
+
+
+  useEffect(() => {
+    if (currentItem) {
+      setFormValues({
+        category: currentItem.category,
+        title: currentItem.title,
+        price: currentItem.price,
+        description: currentItem.description
+      })
+    }
+  }, [])
 
 
   function handleChange(e) {
