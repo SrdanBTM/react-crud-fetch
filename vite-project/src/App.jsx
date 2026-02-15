@@ -73,6 +73,7 @@ function App() {
         && <AddModal
           categoryOptions={categoryOptions}
           setOpenedModal={setOpenedModal}
+          setItems={setItems}
         />
       }
 
