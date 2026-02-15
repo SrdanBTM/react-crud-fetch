@@ -18,11 +18,13 @@ export default function DeleteModal({ currentItem, setOpenedModal, setItems }) {
       <Button
         title='Cancel'
         variant='cancelButtonModal'
+        type='button'
       />
       <Button
         title='Delete'
         variant='deleteButtonModal'
         onClick={handleDelete}
+        type='button'
       />
     </>
 

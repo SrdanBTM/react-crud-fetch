@@ -3,9 +3,17 @@
 import styles from './input.module.css'
 
 
-export default function ItemInput({ id }) {
+export default function ItemInput({ id, onChange, value, name, type, step }) {
 
   return (
-      <input id={id} />
+    <input
+      type={type}
+      id={id}
+      onChange={onChange}
+      value={value}
+      name={name}
+      step={step}
+      noValidate
+    />
   )
 }

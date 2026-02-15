@@ -13,10 +13,12 @@ export default function EditModal({ currentItem, categoryOptions, setOpenedModal
       <Button
         title='Cancel'
         variant='cancelButtonModal'
+        type='button'
       />
       <Button
         title='Save'
         variant='saveButtonModal'
+        type='submit'
       />
     </>
 
