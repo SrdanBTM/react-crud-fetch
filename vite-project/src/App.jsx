@@ -18,15 +18,16 @@ function App() {
 
   const sortOptions = ['Title (A-Z)', 'Title (Z-A)', 'Price (Low-High)', 'Price (High-Low)']
 
-  const categories = []
-  items.forEach(item => {
-    if (!categories.includes(item.category)) {
-      categories.push(item.category)
+  
+  const categoryOptions = []
+  const categories = items.map(item => item.category)
+  const transformedCategories = categories.map(category => category[0].toUpperCase() + category.slice(1).toLowerCase())
+  transformedCategories.forEach(category => {
+    if (!categoryOptions.includes(category)) {
+      categoryOptions.push(category)
     }
   })
-  const categoryOptions = categories.map(category => category[0].toUpperCase() + category.slice(1).toLowerCase())
-
-
+  
 
   useEffect(() => {
     async function load() {
