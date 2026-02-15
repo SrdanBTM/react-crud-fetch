@@ -18,26 +18,38 @@ function App() {
 
   const sortOptions = ['Title (A-Z)', 'Title (Z-A)', 'Price (Low-High)', 'Price (High-Low)']
 
-  
+
   const categoryOptions = []
   const categories = items.map(item => item.category)
-  const transformedCategories = categories.map(category => category[0].toUpperCase() + category.slice(1).toLowerCase())
-  transformedCategories.forEach(category => {
+  categories.forEach(category => {
     if (!categoryOptions.includes(category)) {
       categoryOptions.push(category)
     }
   })
-  
+
 
   useEffect(() => {
     async function load() {
       try {
+
+        // fetch data and parse to json
         const response = await fetch('https://dummyjson.com/products')
         if (!response.ok) {
           throw new Error('Failed to fetch items')
         }
         const data = await response.json()
-        setItems(data.products)
+
+        // add createdAt property to all items
+        const items = data.products
+        const baseTime = Date.now()
+        const itemsWithCreatedAt = items.map((item, index) => ({
+          ...item,
+          createdAt: baseTime - (items.length - index)
+        }))
+
+        // update state with 'items with createdAt property'
+        setItems(itemsWithCreatedAt)
+
       } catch (err) {
         setIsError(true)
       } finally {
@@ -83,6 +95,7 @@ function App() {
           currentItem={currentItem}
           categoryOptions={categoryOptions}
           setOpenedModal={setOpenedModal}
+          setItems={setItems}
         />
       }
 

@@ -7,6 +7,8 @@ import ItemRow from '../item-row/ItemRow.jsx'
 export default function ItemsTable({ items, setCurrentItem, setOpenedModal }) {
 
 
+  const sortedItemsByCreatedAt = items.sort((a, b) => b.createdAt - a.createdAt)
+
 
   return (
     <table>
@@ -21,7 +23,7 @@ export default function ItemsTable({ items, setCurrentItem, setOpenedModal }) {
       </thead>
 
       <tbody>
-        {items.map(item => (
+        {sortedItemsByCreatedAt.map(item => (
           <ItemRow
             key={item.id}
             item={item}

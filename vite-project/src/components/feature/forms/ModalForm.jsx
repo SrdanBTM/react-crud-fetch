@@ -63,7 +63,7 @@ export default function ModalForm({ categoryOptions, setItems, setOpenedModal, c
     setErrors(newErrors)
 
     if (Object.keys(newErrors).length === 0) {
-      const newItem = { ...formValues, price: Number(formValues.price), id: crypto.randomUUID() }
+      const newItem = { ...formValues, price: Number(formValues.price), id: crypto.randomUUID(), createdAt: Date.now() }
       setItems(prev => [newItem, ...prev])
       setOpenedModal(null)
     }
