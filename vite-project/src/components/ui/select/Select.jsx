@@ -5,6 +5,7 @@ import styles from './select.module.css'
 
 export default function Select({ options, width, id, onChange, value, name }) {
 
+
   return (
     <select
       className={styles.container}
@@ -15,7 +16,14 @@ export default function Select({ options, width, id, onChange, value, name }) {
       name={name}
       noValidate
     >
-      {options.map((op, index) => <option key={index}>{op}</option>)}
+      {options.map((op, index) => (
+        <option
+          key={index}
+          value={op}
+        >
+          {op}
+        </option>)
+      )}
     </select>
   )
 }

@@ -14,9 +14,11 @@ function App() {
   const [isError, setIsError] = useState(false)
   const [openedModal, setOpenedModal] = useState(null)
   const [currentItem, setCurrentItem] = useState(null)
+  const [selectedSortOption, setSelectedSortOption] = useState('Newest')
+  const [selectedCategoryOption, setSelectedCategoryOption] = useState('All categories')
 
 
-  const sortOptions = ['Title (A-Z)', 'Title (Z-A)', 'Price (Low-High)', 'Price (High-Low)']
+  const sortOptions = ['Newest', 'Oldest', 'Title (A-Z)', 'Title (Z-A)', 'Price (Low-High)', 'Price (High-Low)']
 
 
   const categoryOptions = []
@@ -87,6 +89,7 @@ function App() {
           categoryOptions={categoryOptions}
           setOpenedModal={setOpenedModal}
           setItems={setItems}
+          openedModal={openedModal}
         />
       }
 
@@ -96,6 +99,7 @@ function App() {
           categoryOptions={categoryOptions}
           setOpenedModal={setOpenedModal}
           setItems={setItems}
+          openedModal={openedModal}
         />
       }
 
@@ -103,12 +107,16 @@ function App() {
         sortOptions={sortOptions}
         categoryOptions={categoryOptions}
         setOpenedModal={setOpenedModal}
+        setSelectedSortOption={setSelectedSortOption}
+        setSelectedCategoryOption={setSelectedCategoryOption}
       />
 
       <Main
         items={items}
         setCurrentItem={setCurrentItem}
         setOpenedModal={setOpenedModal}
+        selectedSortOption={selectedSortOption}
+        selectedCategoryOption={selectedCategoryOption}
       />
 
     </div>

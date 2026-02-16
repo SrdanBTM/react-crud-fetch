@@ -4,10 +4,27 @@ import styles from './itemsTable.module.css'
 import ItemRow from '../item-row/ItemRow.jsx'
 
 
-export default function ItemsTable({ items, setCurrentItem, setOpenedModal }) {
+export default function ItemsTable({ items, setCurrentItem, setOpenedModal, selectedSortOption, selectedCategoryOption }) {
 
 
-  const sortedItemsByCreatedAt = items.sort((a, b) => b.createdAt - a.createdAt)
+  const sortMap = {
+    'Newest': (a, b) => b.createdAt - a.createdAt,
+    'Oldest': (a, b) => a.createdAt - b.createdAt,
+    'Title (A-Z)': (a, b) => a.title.localeCompare(b.title),
+    'Title (Z-A)': (a, b) => b.title.localeCompare(a.title),
+    'Price (Low-High)': (a, b) => a.price - b.price,
+    'Price (High-Low)': (a, b) => b.price - a.price
+  }
+
+  const sortedItems = [...items]
+  sortedItems.sort(sortMap[selectedSortOption])
+
+
+  let categoryFilteredItems = sortedItems
+  if (selectedCategoryOption !== 'All categories') {
+    categoryFilteredItems = sortedItems.filter(item => item.category === selectedCategoryOption)
+  }
+
 
 
   return (
@@ -23,7 +40,7 @@ export default function ItemsTable({ items, setCurrentItem, setOpenedModal }) {
       </thead>
 
       <tbody>
-        {sortedItemsByCreatedAt.map(item => (
+        {categoryFilteredItems.map(item => (
           <ItemRow
             key={item.id}
             item={item}
