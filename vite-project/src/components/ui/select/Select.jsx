@@ -16,9 +16,9 @@ export default function Select({ options, width, id, onChange, value, name }) {
       name={name}
       noValidate
     >
-      {options.map((op, index) => (
+      {options.map(op => (
         <option
-          key={index}
+          key={op}
           value={op}
         >
           {op}

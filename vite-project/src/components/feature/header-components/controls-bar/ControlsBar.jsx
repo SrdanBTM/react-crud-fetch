@@ -5,7 +5,14 @@ import Select from '../../../ui/select/Select.jsx'
 import Button from '../../../ui/button/Button.jsx'
 
 
-export default function ControlsBar({ sortOptions, categoryOptions, setSelectedSortOption, setSelectedCategoryOption }) {
+export default function ControlsBar({
+  sortOptions,
+  categoryOptions,
+  selectedSortOption, setSelectedSortOption,
+  selectedCategoryOption, setSelectedCategoryOption,
+  setSearchInputValue
+}) {
+
 
   const filterCategoryOptions = ['All categories', ...categoryOptions]
 
@@ -18,12 +25,32 @@ export default function ControlsBar({ sortOptions, categoryOptions, setSelectedS
     setSelectedCategoryOption(e.target.value)
   }
 
+  function handleClickResetFilters() {
+    setSelectedSortOption(sortOptions[0])
+    setSelectedCategoryOption(filterCategoryOptions[0])
+    setSearchInputValue('')
+  }
+
 
   return (
     <div className={styles.container}>
-      <Select options={filterCategoryOptions} onChange={handleChangeCategoryOption} width='auto' />
-      <Select options={sortOptions}  onChange={handleChangeSortOption} width='auto' />
-      <Button title='Reset filters' variant='resetButtonFilter' />
+      <Select
+        options={filterCategoryOptions}
+        onChange={handleChangeCategoryOption}
+        width='auto'
+        value={selectedCategoryOption}
+      />
+      <Select
+        options={sortOptions}
+        onChange={handleChangeSortOption}
+        width='auto'
+        value={selectedSortOption}
+      />
+      <Button
+        title='Reset filters'
+        variant='resetButtonFilter'
+        onClick={handleClickResetFilters}
+        type='button' />
     </div>
   )
 }

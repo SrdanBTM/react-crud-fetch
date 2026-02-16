@@ -6,7 +6,14 @@ import ControlsBar from '../controls-bar/ControlsBar.jsx'
 import AddItem from '../add-item/AddItem.jsx'
 
 
-export default function Header({ sortOptions, categoryOptions, setOpenedModal, setSelectedSortOption, setSelectedCategoryOption, setSearchInputValue, searchInputValue }) {
+export default function Header({ 
+  sortOptions, 
+  categoryOptions, 
+  setOpenedModal, 
+  selectedSortOption, setSelectedSortOption, 
+  selectedCategoryOption, setSelectedCategoryOption, 
+  searchInputValue, setSearchInputValue
+}) {
 
 
   function handleChange(e) {
@@ -23,8 +30,11 @@ export default function Header({ sortOptions, categoryOptions, setOpenedModal, s
       <ControlsBar
         sortOptions={sortOptions}
         categoryOptions={categoryOptions}
+        selectedSortOption={selectedSortOption}
+        selectedCategoryOption={selectedCategoryOption}
         setSelectedSortOption={setSelectedSortOption}
         setSelectedCategoryOption={setSelectedCategoryOption}
+        setSearchInputValue={setSearchInputValue}
       />
       <AddItem
         setOpenedModal={setOpenedModal}

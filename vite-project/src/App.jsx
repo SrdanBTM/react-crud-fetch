@@ -16,7 +16,7 @@ function App() {
   const [currentItem, setCurrentItem] = useState(null)
   const [selectedSortOption, setSelectedSortOption] = useState('Newest')
   const [selectedCategoryOption, setSelectedCategoryOption] = useState('All categories')
-  const [searchInputValue, setSearchInputValue] = useState(null)
+  const [searchInputValue, setSearchInputValue] = useState('')
 
 
   const sortOptions = ['Newest', 'Oldest', 'Title (A-Z)', 'Title (Z-A)', 'Price (Low-High)', 'Price (High-Low)']
@@ -108,8 +108,11 @@ function App() {
         sortOptions={sortOptions}
         categoryOptions={categoryOptions}
         setOpenedModal={setOpenedModal}
+        selectedSortOption={selectedSortOption}
+        selectedCategoryOption={selectedCategoryOption}
         setSelectedSortOption={setSelectedSortOption}
         setSelectedCategoryOption={setSelectedCategoryOption}
+        searchInputValue={searchInputValue}
         setSearchInputValue={setSearchInputValue}
       />
 
