@@ -2,7 +2,7 @@
 
 # react-crud-fetch
 
-A minimal React CRUD application demonstrating data fetching with the Fetch API and client-side state management.
+A minimal React CRUD application demonstrating client-side data fetching with the Fetch API and structured state management.
 
 ---
 
@@ -10,26 +10,44 @@ A minimal React CRUD application demonstrating data fetching with the Fetch API 
 
 - Create, read, update and delete items (CRUD)
 - Data fetching using the Fetch API
-- Client-side state management with React hooks
+- Client-side sorting and filtering
+- Controlled form inputs with basic validation
 - Loading, error and empty states
-- Clean and simple component structure
-- Minimal UI focused on logic and data flow
+- Clean and modular component structure
 
 ---
 
 ## 🛠 Tech Stack
 
-- React
+- React (Hooks)
 - JavaScript (ES2022)
 - Vite
 - Fetch API
+- CSS Modules
+
+---
+
+## 🧠 Architecture
+
+- App manages global state (items, sorting, filtering)
+- UI components focus on rendering
+- Form logic is encapsulated inside modal components
+- Data fetching is separated from presentation logic
 
 ---
 
 ## 🎯 Project Goal
 
-- The goal of this project is to demonstrate:
-- Proper handling of async data fetching
-- Basic CRUD logic in a React application
-- Clear separation of concerns (components, services, state)
-- A solid foundation for more advanced versions (TypeScript, BaaS, etc.)
+The goal of this project is to demonstrate:
+
+- Proper handling of asynchronous data fetching
+- Predictable CRUD data flow in React
+- Clear separation of concerns (state, UI, logic)
+- A solid foundation for more advanced versions (TypeScript, backend integration, BaaS)
+
+---
+
+## ▶️ Run Locally
+
+npm install
+npm run dev
