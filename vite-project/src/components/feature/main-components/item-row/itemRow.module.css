@@ -1,5 +1,8 @@
 
 
+.container {
+  position: relative;
+}
 
 .container:hover {
   background: var(--hover-bg);
@@ -35,7 +38,7 @@
   text-transform: uppercase;
   font-size: 14px;
   width: 140px;
-  padding-left: 35px;
+  padding-left: 40px;
 }
 
 .title {
@@ -47,3 +50,15 @@
 }
 
 
+
+.added {
+  border-left: 4px solid #22C55E;
+}
+
+.edited {
+  border-left: 4px solid #3B82F6;
+}
+
+.deleted {
+  border-left: 4px solid #EF4444;
+}

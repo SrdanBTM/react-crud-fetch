@@ -4,7 +4,15 @@ import styles from './itemsTable.module.css'
 import ItemRow from '../item-row/ItemRow.jsx'
 
 
-export default function ItemsTable({ items, setCurrentItem, setOpenedModal, selectedSortOption, selectedCategoryOption, searchInputValue }) {
+export default function ItemsTable({
+  items,
+  setCurrentItem,
+  setOpenedModal,
+  selectedSortOption,
+  selectedCategoryOption,
+  searchInputValue,
+  itemStatus
+}) {
 
 
   const sortMap = {
@@ -53,6 +61,7 @@ export default function ItemsTable({ items, setCurrentItem, setOpenedModal, sele
             item={item}
             setCurrentItem={setCurrentItem}
             setOpenedModal={setOpenedModal}
+            itemStatus={itemStatus}
           />
         ))}
       </tbody>

@@ -4,12 +4,22 @@ import Button from '../../ui/button/Button.jsx'
 import Modal from '../../ui/modal/Modal.jsx'
 
 
-export default function DeleteModal({ currentItem, setOpenedModal, setItems }) {
+export default function DeleteModal({
+  currentItem,
+  setOpenedModal,
+  setItems,
+  setItemStatus
+}) {
 
-  
+
   function handleDelete() {
-    setItems(prev => prev.filter(item => item.id !== currentItem.id))
+    setItemStatus({ id: currentItem.id, action: 'deleted' })
     setOpenedModal(null)
+
+    setTimeout(() => {
+      setItems(prev => prev.filter(item => item.id !== currentItem.id))
+      setItemStatus({ id: '', action: '' })
+    }, 1000)
   }
 
 

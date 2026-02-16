@@ -4,7 +4,15 @@ import styles from './main.module.css'
 import ItemTable from '../items-table/ItemsTable'
 
 
-export default function Main({ items, setCurrentItem, setOpenedModal, selectedSortOption, selectedCategoryOption, searchInputValue }) {
+export default function Main({ 
+  items, 
+  setCurrentItem, 
+  setOpenedModal, 
+  selectedSortOption, 
+  selectedCategoryOption, 
+  searchInputValue,
+  itemStatus
+ }) {
 
   return (
     <main className={styles.container}>
@@ -15,6 +23,7 @@ export default function Main({ items, setCurrentItem, setOpenedModal, selectedSo
         selectedSortOption={selectedSortOption}
         selectedCategoryOption={selectedCategoryOption}
         searchInputValue={searchInputValue}
+        itemStatus={itemStatus}
       />
     </main>
   )

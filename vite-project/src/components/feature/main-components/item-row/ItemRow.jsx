@@ -4,7 +4,12 @@ import styles from './itemRow.module.css'
 import Button from '../../../ui/button/Button.jsx'
 
 
-export default function ItemRow({ item, setCurrentItem, setOpenedModal }) {
+export default function ItemRow({
+  item,
+  setCurrentItem,
+  setOpenedModal,
+  itemStatus
+}) {
 
 
   function handleDelete() {
@@ -19,7 +24,7 @@ export default function ItemRow({ item, setCurrentItem, setOpenedModal }) {
 
 
   return (
-    <tr className={styles.container}>
+    <tr className={`${styles.container} ${item.id === itemStatus.id ? styles[itemStatus.action] : ''}`} >
       <td className={styles.category}>{item.category}</td>
       <td className={styles.title}>{item.title}</td>
       <td className={styles.description}>{item.description}</td>
