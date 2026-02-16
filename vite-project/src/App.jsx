@@ -66,11 +66,19 @@ function App() {
 
 
   if (isLoading) {
-    return <p>Loading...</p>
+    return (
+      <div className='statusMessage'>
+        <p>Loading...</p>
+      </div>
+    )
   }
 
   if (isError) {
-    return <p>Error</p>
+    return (
+      <div className='statusMessage'>
+        <p>Error</p>
+      </div>
+    )
   }
 
 
