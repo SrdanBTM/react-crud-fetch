@@ -6,7 +6,7 @@ import ModalForm from '../../feature/forms/ModalForm.jsx'
 
 
 
-export default function EditModal({ currentItem, categoryOptions, setOpenedModal, setItems }) {
+export default function EditModal({ currentItem, categoryOptions, setOpenedModal, setItems, openedModal }) {
 
   function handleCancel() {
     setOpenedModal(null)
@@ -40,6 +40,7 @@ export default function EditModal({ currentItem, categoryOptions, setOpenedModal
         setItems={setItems}
         currentItem={currentItem}
         setOpenedModal={setOpenedModal}
+        openedModal={openedModal}
       />
     </Modal>
   )

@@ -5,7 +5,7 @@ import Button from '../../ui/button/Button.jsx'
 import ModalForm from '../forms/ModalForm.jsx'
 
 
-export default function AddModal({ categoryOptions, setOpenedModal, setItems }) {
+export default function AddModal({ categoryOptions, setOpenedModal, setItems, openedModal }) {
 
   function handleCancel() {
     setOpenedModal(null)
@@ -38,6 +38,7 @@ export default function AddModal({ categoryOptions, setOpenedModal, setItems }) 
         categoryOptions={categoryOptions}
         setItems={setItems}
         setOpenedModal={setOpenedModal}
+        openedModal={openedModal}
       />
     </Modal>
   )

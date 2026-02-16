@@ -7,7 +7,7 @@ import Textarea from '../../ui/textarea/Textarea.jsx'
 import { useState, useEffect } from 'react'
 
 
-export default function ModalForm({ categoryOptions, setItems, setOpenedModal, currentItem }) {
+export default function ModalForm({ categoryOptions, setItems, setOpenedModal, currentItem, openedModal }) {
 
   const modalCategoryOptions = ['', ...categoryOptions]
 
@@ -62,9 +62,30 @@ export default function ModalForm({ categoryOptions, setItems, setOpenedModal, c
 
     setErrors(newErrors)
 
+
     if (Object.keys(newErrors).length === 0) {
-      const newItem = { ...formValues, price: Number(formValues.price), id: crypto.randomUUID(), createdAt: Date.now() }
-      setItems(prev => [newItem, ...prev])
+
+      if (openedModal === 'addModal') {
+        const newItem = {
+          ...formValues,
+          price: Number(formValues.price),
+          id: crypto.randomUUID(),
+          createdAt: Date.now()
+        }
+        setItems(prev => [newItem, ...prev])
+
+      } else if (openedModal === 'editModal') {
+        setItems(prev => prev.map(item =>
+          item.id === currentItem.id
+            ? {
+              ...item,
+              ...formValues,
+              price: Number(formValues.price)
+            }
+            : item
+        ))
+      }
+
       setOpenedModal(null)
     }
 
