@@ -4,7 +4,7 @@ import styles from './itemsTable.module.css'
 import ItemRow from '../item-row/ItemRow.jsx'
 
 
-export default function ItemsTable({ items, setCurrentItem, setOpenedModal, selectedSortOption, selectedCategoryOption }) {
+export default function ItemsTable({ items, setCurrentItem, setOpenedModal, selectedSortOption, selectedCategoryOption, searchInputValue }) {
 
 
   const sortMap = {
@@ -16,15 +16,22 @@ export default function ItemsTable({ items, setCurrentItem, setOpenedModal, sele
     'Price (High-Low)': (a, b) => b.price - a.price
   }
 
+
+  // sort items by sort option
   const sortedItems = [...items]
   sortedItems.sort(sortMap[selectedSortOption])
 
-
+  // filter items by category
   let categoryFilteredItems = sortedItems
   if (selectedCategoryOption !== 'All categories') {
     categoryFilteredItems = sortedItems.filter(item => item.category === selectedCategoryOption)
   }
 
+  // filter items by search value
+  let searchedItems = categoryFilteredItems
+  if (searchInputValue) {
+    searchedItems = categoryFilteredItems.filter(item => item.title.toLowerCase().includes(searchInputValue.toLowerCase()))
+  }
 
 
   return (
@@ -40,7 +47,7 @@ export default function ItemsTable({ items, setCurrentItem, setOpenedModal, sele
       </thead>
 
       <tbody>
-        {categoryFilteredItems.map(item => (
+        {searchedItems.map(item => (
           <ItemRow
             key={item.id}
             item={item}
