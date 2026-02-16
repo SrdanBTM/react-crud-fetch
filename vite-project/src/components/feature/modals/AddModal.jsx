@@ -7,12 +7,17 @@ import ModalForm from '../forms/ModalForm.jsx'
 
 export default function AddModal({ categoryOptions, setOpenedModal, setItems }) {
 
+  function handleCancel() {
+    setOpenedModal(null)
+  }
+
   const footer =
     <>
       <Button
         title='Cancel'
         variant='cancelButtonModal'
         type='button'
+        onClick={handleCancel}
       />
       <Button
         title='Add'
